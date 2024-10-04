@@ -1,0 +1,29 @@
+*********** DB Disney+ ***********
+L’obiettivo del progetto è lo sviluppo di un database utilizzando le tecnologie NoSQL e MongoDB e l’implementazione di un software in linguaggio Python per la sua interrogazione.
+Dopo un’attenta ricerca, la scelta è ricaduta sulla gestione dei dati della piattaforma streaming, rilasciata nel 2020: Disney+.
+
+*********** COMANDI PER CARICAMENTO DB SU Windows ***********
+Posizionarsi all'interno della directory in cui sono installati i tools della suite MongoDB.
+./mongoimport --db disneyDB --collection actors --type csv --headerline --ignoreBlanks -- file D:\PycharmProjects\disneyDB\ACTOR_final.csv
+./mongoimport --db disneyDB --collection directors --type csv --headerline --ignoreBlanks -- file D:\PycharmProjects\disneyDB\DIRECTOR_final.csv
+./mongoimport --db disneyDB --collection movies --type csv --headerline --ignoreBlanks -- file D:\PycharmProjects\disneyDB\MOVIE_final.csv
+./mongoimport --db disneyDB --collection shows --type csv --headerline --ignoreBlanks -- file D:\PycharmProjects\disneyDB\SHOW_final.csv
+
+*********** COMANDI PER CARICAMENTO DB SU MacOS ***********
+mongoimport --db disneyDB --collection actors --type csv --headerline --ignoreBlanks --file /Users/teresaelia/PycharmProjects/ProgettoBD2/ACTOR_final.csv
+mongoimport --db disneyDB --collection directors --type csv --headerline --ignoreBlanks --file /Users/teresaelia/PycharmProjects/ProgettoBD2/DIRECTOR_final.csv
+mongoimport --db disneyDB --collection movies --type csv --headerline --ignoreBlanks --file /Users/teresaelia/PycharmProjects/ProgettoBD2/MOVIE_final.csv
+mongoimport --db disneyDB --collection shows --type csv --headerline --ignoreBlanks --file /Users/teresaelia/PycharmProjects/ProgettoBD2/SHOW_final.csv
+
+*********** NOTE ***********
+Negli script:
+- script_for_dataset/split_credits_csv.py
+- script_for_dataset/split_titles_csv.py
+in Windows il path deve essere con ../ mentre su MacOS prevede solo il nome del file.
+
+Negli script
+- script_for_dataset/remove_role_attribute_actor_csv.py,
+- script_for_dataset/remove_role_attribute_director_csv.py,
+- script_for_dataset/remove_role_attribute_movie_csv.py,
+- script_for_dataset/remove_role_attribute_show_csv.py
+in Windows è necessario aggiungere il flag encoding='cp1252'.
